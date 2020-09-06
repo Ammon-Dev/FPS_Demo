@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://GameRoot.gd" type="Script" id=1]
+[ext_resource path="res://character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://floor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://bridge.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=7]
+
+[node name="GameRoot" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="character" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.519842, 0.601913, -0.0192924 )
+
+[node name="Buttons" type="Spatial" parent="."]
+editor/display_folded = true
+
+[node name="Button" parent="Buttons" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 1.47855, 2.13843 )
+
+[node name="Button2" parent="Buttons" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 1, -4.37114e-008, 0, -4.37114e-008, -1, -1, -4.37114e-008, 1.91069e-015, -4.70769, 0.466341, 19.8007 )
+
+[node name="Button3" parent="Buttons" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, -0.778283, 2.53843, 13.1985 )
+
+[node name="Button4" parent="Buttons" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, -0.778283, 0.703811, 20.919 )
+
+[node name="Button5" parent="Buttons" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 1, -4.37114e-008, 0, -4.37114e-008, -1, -1, -4.37114e-008, 1.91069e-015, -4.70769, 2.26121, 25.897 )
+
+[node name="floor" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 22.8353 )
+
+[node name="Wall1-1" parent="floor" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.5, -0.0170579 )
+
+[node name="Wall1-2" parent="floor" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2.5, -0.0170579 )
+
+[node name="Wall1-3" parent="floor" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -0.2, 0, -8.74228e-009, 0, 2.5, -5.06706 )
+
+[node name="Wall1-4" parent="floor" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -0.2, 0, -8.74228e-009, 0, 2.5, 5.03294 )
+
+[node name="floor2" parent="." instance=ExtResource( 4 )]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497, 7.7 )
+
+[node name="Wall2-1" parent="floor2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, -2.372, -5.252 )
+
+[node name="Wall2-2" parent="floor2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0.003, -2.373, 5.249 )
+
+[node name="Wall2-3" parent="floor2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-008, 0, 0.8, 0, 1, 0, -1, 0, -3.49691e-008, 0.999752, 0, -5.252 )
+
+[node name="Wall2-4" parent="floor2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-008, 0, 0.8, 0, 1, 0, -1, 0, -3.49691e-008, -1.67769, 0, -1.30667 )
+
+[node name="Wall2-5" parent="floor2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-008, 0, 0.8, 0, 1, 0, -1, 0, -3.49691e-008, -6.62239, 0, 1.82688 )
+
+[node name="Wall2-6" parent="floor2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-008, 0, 0.5, 0, 1, 0, -1, 0, -2.18557e-008, 1.15393, 0, 1.82688 )
+
+[node name="Wall2-7" parent="floor2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.35, 1.15393, 0, 3.7454 )
+
+[node name="Wall2-8" parent="floor2" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-008, 0, 0.35, 0, 1, 0, -1, 0, -1.5299e-008, -0.321767, 0, 5.249 )
+
+[node name="floor3" parent="." instance=ExtResource( 4 )]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 25.7 )
+
+[node name="bridge" parent="floor3" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 0.199394, -0.995018, 0, 1.99004, 0.099697, -3.80507, -0.485184, -10.453 )
+
+[node name="Wall3-1" parent="floor3" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-008, 0, 1, 7.45058e-009, 1, 0, -1, 7.45058e-009, -4.37114e-008, 0, -2.35, -5.232 )
+
+[node name="HUD" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="HUD"]
+editor/display_folded = true
+margin_left = 1.0
+margin_top = 533.0
+margin_right = 162.0
+margin_bottom = 599.0
+
+[node name="Goal" type="Label" parent="HUD/Panel"]
+margin_left = 7.0
+margin_top = 12.0
+margin_right = 148.0
+margin_bottom = 54.0
+text = "Buttons hit: 5/5"
+
+[node name="Panel2" type="Panel" parent="HUD"]
+margin_left = 510.0
+margin_top = 310.0
+margin_right = 515.0
+margin_bottom = 315.0
+rect_scale = Vector2( 0.812994, 0.830974 )
+
+[node name="Pause" parent="." instance=ExtResource( 7 )]
+margin_left = 425.0
+margin_top = 273.0
+margin_right = 561.0
+margin_bottom = 381.0
+[connection signal="hit" from="Buttons/Button" to="." method="_on_Button_hit"]
+[connection signal="hit" from="Buttons/Button2" to="." method="_on_Button_hit"]
+[connection signal="hit" from="Buttons/Button3" to="." method="_on_Button_hit"]
+[connection signal="hit" from="Buttons/Button4" to="." method="_on_Button_hit"]
+[connection signal="hit" from="Buttons/Button5" to="." method="_on_Button_hit"]
